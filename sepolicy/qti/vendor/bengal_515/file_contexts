@@ -1,0 +1,2 @@
+# EMMC
+/sys/devices(/platform)?/soc/[a-f0-9]+.sdhci/mmc_host/mmc0/clk_scaling(/.*)?    u:object_r:vendor_sysfs_mmc_host:s0

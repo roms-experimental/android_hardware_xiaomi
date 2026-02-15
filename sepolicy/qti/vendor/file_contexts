@@ -1,0 +1,34 @@
+# Citsensor
+/(odm|vendor/odm|vendor|system/vendor)/bin/hw/vendor.xiaomi.sensor.citsensorservice.aidl    u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
+
+# Displayfeature
+/(vendor|system/vendor)/bin/displayfeature                                              u:object_r:displayfeature_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service    u:object_r:hal_displayfeature_xiaomi_default_exec:s0
+
+# Dolby
+/data/vendor/dolby(/.*)?                                                    u:object_r:vendor_data_file:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service    u:object_r:hal_dms_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.media\.c2@1\.0-service        u:object_r:mediacodec_exec:s0
+
+# Fingerprint
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi    u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service\.xiaomi         u:object_r:hal_fingerprint_default_exec:s0
+
+# PMIC
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery(/.*)?    u:object_r:vendor_sysfs_battery_supply:s0
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb(/.*)?        u:object_r:vendor_sysfs_usb_supply:s0
+
+# Sensors
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal    u:object_r:hal_sensors_default_exec:s0
+
+# Thermal
+/data/vendor/thermal(/.*)?                 u:object_r:thermal_data_file:s0
+/(vendor|system/vendor)/bin/mi_thermald    u:object_r:mi_thermald_exec:s0
+
+# Touchfeature
+/dev/xiaomi-touch                                                               u:object_r:touchfeature_device:s0
+/(vendor|system/vendor)/bin/hw/vendor\.xiaomi\.hw\.touchfeature@1\.0-service    u:object_r:hal_touchfeature_xiaomi_default_exec:s0
+
+# Wakeup
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/usb/wakeup[0-9]*(/.*)?        u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,nopmi-chg/power_supply/battery/wakeup[0-9]*(/.*)?    u:object_r:sysfs_wakeup:s0
